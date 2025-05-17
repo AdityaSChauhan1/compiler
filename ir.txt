@@ -1,0 +1,13 @@
+a = 5
+b = 10
+c = 1
+t0 = a + b
+t1 = t0 + c
+d = t1
+if a > 1 goto L0
+goto L1
+L0:
+d = 69
+goto L2
+L1:
+return d
