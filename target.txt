@@ -1,0 +1,83 @@
+    MOV a , 5
+    MOV b , 10
+    MOV c , 1
+    MOV R1, b
+    MUL R1, c
+    MOV t0 , R1
+    MOV R1, a
+    ADD R1, t0
+    MOV t1 , R1
+    MOV R1, a
+    MUL R1, b
+    MOV t2 , R1
+    MOV R1, t1
+    ADD R1, t2
+    MOV t3 , R1
+    MOV d , t3
+    CMP d, 10
+    MOV t4 , 0
+    JG true_0
+    JMP end_0
+true_0:
+    MOV t4 , 1
+end_0:
+    CMP t4, 0
+    JNZ L0
+    JMP L1
+L0:
+    MOV R1, d
+    SUB R1, 5
+    MOV t5 , R1
+    MOV d , t5
+    JMP L2
+L1:
+    MOV R1, d
+    ADD R1, 5
+    MOV t6 , R1
+    MOV d , t6
+L2:
+    CMP d, 20
+    MOV t7 , 0
+    JL true_1
+    JMP end_1
+true_1:
+    MOV t7 , 1
+end_1:
+    CMP t7, 0
+    JNZ L3
+    JMP L4
+L3:
+    MOV R1, d
+    ADD R1, 1
+    MOV t8 , R1
+    MOV d , t8
+    JMP L2
+L4:
+    MOV a , 6
+L6:
+    CMP a, 10
+    MOV t9 , 0
+    JL true_2
+    JMP end_2
+true_2:
+    MOV t9 , 1
+end_2:
+    CMP t9, 0
+    JNZ L7
+    JMP L8
+L7:
+    MOV R1, e
+    ADD R1, 4
+    MOV t10 , R1
+    MOV e , t10
+L5:
+    MOV R1, a
+    ADD R1, 1
+    MOV t11 , R1
+    MOV a , t11
+    JMP L6
+L8:
+    MOV R0, d
+    JMP exit_program
+exit_program:
+    HALT

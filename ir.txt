@@ -1,13 +1,41 @@
 a = 5
 b = 10
 c = 1
-t0 = a + b
-t1 = t0 + c
-d = t1
-if a > 1 goto L0
+t0 = b * c
+t1 = a + t0
+t2 = a * b
+t3 = t1 + t2
+d = t3
+t4 = d > 10
+if t4 goto L0
 goto L1
 L0:
-d = 69
+t5 = d - 5
+d = t5
 goto L2
 L1:
+t6 = d + 5
+d = t6
+L2:
+t7 = d < 20
+if t7 goto L3
+goto L4
+L3:
+t8 = d + 1
+d = t8
+goto L2
+L4:
+a = 6
+L6:
+t9 = a < 10
+if t9 goto L7
+goto L8
+L7:
+t10 = e + 4
+e = t10
+L5:
+t11 = a + 1
+a = t11
+goto L6
+L8:
 return d
