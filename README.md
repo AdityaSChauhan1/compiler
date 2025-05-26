@@ -49,7 +49,7 @@ variable decleration
 You can use the command line interface to generate AST and IR for Python code:
 
 ```bash
-  gcc main.c lexer.c parser.c semantic.c ir.c suggest. tarcode.c -o compiler
+  gcc main.c lexer.c parser.c semantic.c ir.c suggest.c tarcode.c -o compiler
   ./compiler input.txt
   dot -Tpng tree.dot -o tree.png
   open tree.png
