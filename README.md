@@ -55,7 +55,7 @@ You can use the command line interface to generate AST and IR for Python code:
   open tree.png
 ```
 
-This will display both the Parse tree and the intermediate code for the C language
+This will display both the Parse tree and the intermediate code for the C language.
 
 
 
